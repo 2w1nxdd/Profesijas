@@ -1,0 +1,93 @@
+<!-- Mājas lapas dizains. Оформление сайта:background-color- цвет фона, font- шрифт... 
+https://www.w3schools.com/html/default.asp-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>repl.it</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+
+  <script>
+    function krasa1() {
+      document.getElementById('menu').style.background = '#6495ED';
+    }
+  </script>
+  <script>
+    function krasa2() {
+      document.getElementById('menu').style.background = '#808000';
+    }
+
+  </script>
+  <script>
+    function displayDate() {
+      document.getElementById("demo").innerHTML = Date();
+    }
+  </script>
+  <script>
+    function myFunction() {
+      document.getElementById("demo").innerHTML = "Paragraph changed.";
+    }
+
+  </script>
+</head>
+
+<body>
+  <div class="header">
+    <img src="riga.jpg" width="200px">
+    <p>Rīgas Purvciema vidusskola</p>
+
+  </div>
+  <div id="menu">
+
+    <p><a href="index.html">Galvēna</a></p>
+    <p><a href="profesija.html">Profesija</a></p>
+    <p><a href="lv-macibu-vietas.html">Kur es varu mācīties Laivijā?</a></p>
+    <p><a href="nakotnes-profesija.html">Manas nākotnes profesijas apraksts</a>
+    <p><a href="anketa.html">Anketa </a></p>
+    </p>
+  </div>
+  <div id="content">
+    <input id="name" placeholder="Vārd Uzvārds">
+    <p>Izvelēties unviersitāte</p>
+    <select name="universites" id="universites">
+      <option value="rtu">RTU</option>
+      <option value="rsu">RSU</option>
+      <option value="lu">LU</option>
+    </select>
+    <br>
+    <input type="number" placeholder="Matematikas eksamens" id="math">% <br>
+    <input type="number" placeholder="Angļu valoda eksamens" id="eng">% <br>
+    <input type="number" placeholder="Latviešū valoda eksamens" id="lat">% <br>
+    <label for="olimpiades">Vai jums ir rezulatati olimpiados?</label>
+    <input type="checkbox" id="olimp" name="olimpiades"> <br>
+    <input placeholder="Ja ir, tad kādi?"> <br>
+    <button type="button" onclick="sendInfo()">Sniegt informāciju!</button>
+  </div>
+  <div class="footer"> Rīga, 2021 </div>
+
+  <script>
+    function sendInfo() {
+      let name = document.getElementById("name").value;
+      let univers = document.getElementById("universites").value;
+      let math = document.getElementById("math").value;
+      let eng = document.getElementById("eng").value;
+      let lat = document.getElementById("lat").value;
+      let olimp = document.getElementById("olimp").checked;
+      let info = "";
+      if (olimp == false) {
+        info = "Vārds un uzvārds: " + name + "\nUniversitāte: " + univers + "\nMatematikas eksamens: " + math + "\nAngļu valoda eksamens: " + eng + "\nLatviešu valoda eksamens: " + lat;
+      } else {
+        let olimp_info = document.getElementById("olimp_info").value;
+
+        info = "Vārds un uzvārds: " + name + "\nUniversitāte: " + univers + "\nMatematikas eksamens: " + math + "\nAngļu valoda eksamens: " + eng + "\nLatviešu valoda eksamens: " + lat + "\nRezultāti olimpiados: " + olimp + "\nOlimpiādes rezultāti: " + olimp_info;
+      }
+
+      alert(info);
+    }
+  </script>
+</body>
+
+</html>

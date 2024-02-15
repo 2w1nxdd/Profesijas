@@ -141,3 +141,9 @@ https://www.w3schools.com/css/css3_images.asp */
 .img-prog {
   max-width: 300px;
 }
+
+#math,
+#lat,
+#eng {
+  margin-bottom: 10px;
+}
