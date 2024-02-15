@@ -142,8 +142,6 @@ https://www.w3schools.com/css/css3_images.asp */
   max-width: 300px;
 }
 
-#math,
-#lat,
-#eng {
+#content input, #content select  {
   margin-bottom: 10px;
 }
